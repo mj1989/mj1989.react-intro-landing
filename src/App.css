@@ -1,38 +1,149 @@
-.App {
+* {
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ff7978;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff5fc;
+}
+.container{
+  padding-left: 10vw;
+  padding-right: 10vw;
+  min-width: 350px;
+}
+.top{
+  padding:1em;
+  padding-top: 2em;
   text-align: center;
+  animation-name: slide-in-updown;
+  animation-duration: 2s;
+  animation-fill-mode: backwards;
+  position: relative;
+}
+@keyframes slide-in-updown {
+  from {top: -100px;color:rgb(0,0,0,0);}
+  to {top: 0px;}
+}
+.head{
+  padding: 1em;
+  font-size: 2em;
+  font-weight: bold;
+}
+.section{
+  padding-bottom: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bottom{
+  padding:1em;
+  padding-bottom: 4em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calltoaction{
+  padding-bottom: 2em;
+}
+.calltoaction > button{
+  width: 100%;
+  background-color: #5d54a3;
+  border:0px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px 0px #00000036;
+  color: #fff5fc;
+  padding: 2em;
+  text-align: center;
+  
+}
+.calltoaction > button:hover{
+  opacity: 0.7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.form-section{
+  background-color: white;
+  border:0px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 0px 0px #00000036;
+}
+.form-item{
+  padding: 1em;
+}
+.form-item > input {
+  width: 100%;
+  padding: 1em;
+  border:1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  transition: border 1s;
+  
+}
+.form-item > input:placeholder{
+  color:#6d6d70;
+  font-weight: bold;
+}
+.form-item > input[type=text]:focus{
+  outline: none !important;
+  border:1px solid #36cd8a;
+}
+
+.form-item > button{
+  width: 100%;
+  background-color: #36cd8a;
+  border:0px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px 0px #206b49c8;
+  padding: 2em;
   color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form-item:hover {
+  opacity: 0.7;
 }
 
-.App-link {
-  color: #61dafb;
+.form-item > p {
+  color:rgb(165, 165, 165);
+  text-align: center;
+  font-size: 0.8em;
+}
+.form-item > p > a{
+  color:#d47878;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-item > p > a:hover{
+  color:#f59999;
+}
+.formError > p{
+  padding-left: 2em;
+  font-size: 0.8em;
+  color:rgb(221, 147, 147);
+}
+@media screen and (min-width: 550px){
+  .container{
+    padding-left: 15vw;
+    padding-right: 15vw;
+
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 800px) {
+  .container{
+    display: flex;
+    flex-direction: row;
+    padding:2em;
+    
   }
+
+  .top{
+    width: 50%;
+    text-align: left;
+  }
+  .head{
+    padding-left:0em;
+    padding-top: 5em;
+    padding-bottom:1em;
+  }
+  .section{
+    padding:0em;
+  }
+  
 }
